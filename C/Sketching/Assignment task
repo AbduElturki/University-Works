@@ -1,0 +1,16 @@
+The aims are to practice essential bit manipulation skills, and to read binary
+files. Also, you will get to work on a multi-module program (though you only
+have to develop one module) and you get to see a graphics library being used
+(though you don't have to write any graphics code explicitly yourself).
+
+In this assignment, you are going to be very strongly encouraged to develop by
+writing very small functions. If you don't, and you just put everything into one
+big monolithic function, there is no way you will be able to reach the end of the
+assignment (except perhaps by extreme luck or heroism). On the other hand, if you
+keep your functions very small, you may find the development surprisingly smooth
+and rewarding.
+
+The challenge is to develop a program sketch.c which reads in a file in a custom
+binary format (a .sketch file). The file contains graphics instructions which
+represent a recording of a sketch, including timings. The program translates
+the instructions into calls to a graphics module, which is provided.

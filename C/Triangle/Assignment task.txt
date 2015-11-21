@@ -1,0 +1,25 @@
+The program takes its input from the command line, and prints its output on the
+standard output, e.g.
+
+./triangle 3 4 5
+Equilateral
+The possible responses are:
+
+Equilateral     (all sides equal)
+Isosceles       (two sides equal)
+Right           (has a right angle)
+Scalene         (sides unequal, but no right angle)
+Flat            (no area)
+Impossible      (lengths don't add up)
+Illegal         (lengths are invalid)
+
+
+The program includes 50 auto-tests, of which 49 are currently commented out.
+If the program is run with no command line arguments, it runs the tests and
+prints the number of tests passed. That number is your mark for the first part
+of the assignment.
+
+Your aim is to make the program work with all the tests uncommented. You should
+change the content of the triangle function, and add further functions above it
+as you think fit. You shouldn't change the overall design, because we will test
+your triangle function directly from the outside for marking purposes.

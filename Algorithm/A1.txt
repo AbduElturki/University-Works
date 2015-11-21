@@ -1,0 +1,213 @@
+Questions attempted: 1a,1b,1c,2a,2b,2c,3,4, and 5.
+
+
+Note: I have wrote the answers with both the short description and long
+description in purpose to improve my understanding of Big-oh and revision
+purposes. Feel free to skip the examples.
+
+
+
+1a) O(n) _ if we got n digit then we will do n additions or maybe
+n+1, so it is a linear complexity meaning it is O(n).
+
+--Indepth Description with examples
+
+when adding we line the numbers to the right and then we add the
+digits in a column writing the last number of that addition in the result.
+Therefore, assuming we are adding 8 digit then we need to 8 additions and
+possibly 9 if there are any carry over, and there is 50 digits then we need to
+do 50 additions. Thus, if we got n digit then we will do n additions or maybe
+n+1, so it is a linear complexity meaning it is O(n).
+
+1b) O(n^2) _ if there is n digits there will n^2 multiplication and 2n
+addition. meaning the number of operations will be n^2 + 2n, so it is quadratic
+complexity, and thus the answer is O(n^2).
+
+--Indepth Description with examples
+
+when multiplying we line the numbers and we take the first digit
+in bottom right and multiply it with each top digit. For example, multiplying 5
+digit numbers we must do 25 multiplication and we may need to add 10 numbers to
+get end result. multiplying 7 digits will result 49 multiplications and 14
+addition. Therefore, if there is n digits there will n^2 multiplication and 2n
+addition. meaning the number of operations will be n^2 + 2n, so it is quadratic
+complexity, and thus the answer is O(n^2).
+
+1c) O(n^2) _ if we require to find x^n of a single digit we required to find x^1
+which is x and then x^2 which is x^1 * x, after that we need to find x^3 which
+is x^2 * x .... until we reach x^n = x^(n-1) * x. In order to find time
+complexity, we need to find sum of all operation that was done, which is
+n(n+1)/2 or (n^2+n)/2, this means this a quadratic complexity, and therefore
+the answer is O(n^2).
+
+--Indepth Description with examples
+
+when finding a power of single digit we multiply the base itself
+depending on number exponent. For example, 9^2 = 9 * 9, but if want to find
+9^3 we need to find what's 9^2 and then we multiply it by 9 to get 9^3. Thus,
+if we want to find x^n we start with x^1 = x until x^n = x^(n-1) * x In order to
+find time complexity, we need to find sum of all operation that was done, which
+is n(n+1)/2 or (n^2+n)/2, this means this a quadratic complexity, and therefore
+the answer is O(n^2).
+
+--------------------------------------------------------------------------------
+
+2a) O(n^2) _ if polynomial is an order of n we start with x^n, which has
+n multiplications, then move to x^(n-1) there will be n-1 multiplications...
+so, when x^k there will be k multiplications... x^2 will have 2 multiplications,
+x^1 will have 1 multiplications, until we reach x^0 which has no actual
+multiplication. Thus, to calculate the sum of all operations we use
+(n^2 + n)/2. Therefore, this is a quadratic complexity,and the answer is O(n^2).
+
+
+2b) O(n) _ if a polynomial is an order of n then there will be n multiplications
+and n additions, making it have 2n operations in total. Thus, it is a linear
+complexity and the answer is O(n).
+
+--Indepth Description with examples
+
+by using Horner’s method, if polynomial is an order of 2 then there
+will be just and only 2 multiplications and 2 additions, order of 3 will have 3
+multiplications and 3 additions. Therefore, if a polynomial is an order of n
+then there will be n multiplications and n additions, making it have 2n
+operations. Thus, it is a linear complexity and the answer is O(n).
+
+
+2c) O(n^3) _ the number operations is: 4n^3+3n^2+2n+1, this
+means this a quadratic complexity, and therefore the answer is O(n^2).
+where there is n^3 multiplication, 2n^3 + n^2 + n addition, and n^3+2n^2+n+1
+assignment.
+
+--Indepth Description with examples
+
+To make things somewhat simple I have written the formula as in C program:
+
+for ( i = 0; i < n; i++ ) {
+  for ( j = 0; j < n; j++ ) {
+  c[i][j] = 0;
+    for ( k = 0; k < n; k++ ) {
+    c[i][j] = c[i][j] + (a[i][k] * b[k][j]);
+    }
+  }
+}
+
+This is a triple-nested "for" loops, each for loop will run n times. Therefore,
+outermost loop will loop n times, middle will loop n*n=n^2 times, and the inner
+most will loop n*n^2 = n^3 times.  The multiplication happens in the innermost
+loop so there are n^3 multiplication.
+The addition in innermost loop happens twice so there are 2n^3, in the middle
+loop happens n^2, and in outermost loop happens n times, so number of addition
+operations is 2n^3 + n^2 + n.
+As assigning the value of c[i][j] in the innermost loop will happen n^3,
+assigning the value of k = 0 happens only once of each execution in the
+innermost loop so it only runs n^2, which is similar to assigning c[i][j] to be
+0 in the middle loop which also executes n^2. As for assigning value j to be 0
+occurs once for each run of middle loop so happens n times. Assigning i = 0 is
+straight forward operation, it happens only once when the outermost loop starts
+executing. Therefore, number of assignments is n^3+2n^2+n+1.
+
+Finally, the number operations that was execute it is: 4n^3+3n^2+2n+1, this
+means this a quadratic complexity, and therefore the answer is O(n^2).
+
+--------------------------------------------------------------------------------
+3) The answer is 209823427098.
+
+--Indepth Description with examples
+
+A formula that consists a bunch of functions SUM(A(n)+B(n)+C(n)) where n=1 to 9
+
+function A(n) the number of words of length n or less such that last 3 letters
+are the same, where A(0) = 0 ,  A(1) = 0 ,  A(2) = 0 ,  A(3) = 18 , and
+A(n) = B(n-1) (function B(n) is explained below)
+
+function B(n)  the number of words of length n or less such that last 2 letters
+are the same, where B(0) = 0 ,  B(1) = 0 ,  B(2) = 18 ,  and B(n) = C(n-1)
+(function C(n) is explained below)
+
+function B(n)  the number of words of length n or less such that are different
+from each other, where C(0)=0, C(1) = 18,
+and C(n) = 17 * B(n-1) + 17 * A(n-1) + 17 * 17 C(3)
+
+Why these function work?
+Let's start with function A(n), if we have A(4) that means the possible
+combination are ABBB, BAAA, CDDD... etc the last 3 letters are the same, but if
+we take the first 3 letters ABB, BAA, CDD... etc as you can see the last 2
+letters are the same that's the same as function B(3). Therefore, A(4) = (B(3)).
+
+Function B is similar, if we got combinations of letters like ABCC, DEFF... etc
+each name has 2 same letters at the end but if we take the first 3 letters ABC,
+DEF... etc all the letter aren't the same which leads of have function C(3).
+Therefore, B(4) = (C(3)).
+
+Function C if we have combination such as ABBD, AAAB, and ABCD. if we take the
+first 3 letter of each combination the first one has 2 same last letter, and we
+can have it in 17 different ways so it is 17(B(3)). the second combination, the
+first 3 letters are the same and we can have in 17 different combination so it
+doesn't match up with the fourth letter so it is 17(A(3)). the last combination
+is when the first 3 letters aren't the same and we can have that in 17 different
+combination so it is 17(C(3)). Thus, C(4) = A(3) + B(3) + C(3).
+
+I have wrote a haskell program to save time calculating the answer
+
+> a :: Int -> Int
+> b :: Int -> Int
+> c :: Int -> Int
+
+> a 0 = 0
+> a 1 = 0
+> a 2 = 0
+> a 3 = 18
+> a n = b (n-1)
+
+> b 0 = 0
+> b 1 = 0
+> b 2 = 18
+> b n = c (n-1)
+
+> c 0 = 0
+> c 1 = 18
+> c n = (17*b(n-1)) + (17*a(n-1)) + (17*c(n-1))
+
+then used the ghci and wrote this command:
+sum [a n + b n + c n | n <- [1 .. 9]]
+
+you can save this .txt as .lhs or rename it in order to use it.
+
+--------------------------------------------------------------------------------
+
+4) Long Division:
+
+The time complexity of long division is quadratic, meaning O(n^2). since, the
+schoolbook long division is based of schoolbook multiplication, which is O(n^2),
+and subtraction, which is O(n). Now O(n^2) + O(n) = O(n^2), and therefore,
+as we said before the time complexity of long division is quadratic,
+meaning O(n^2).
+
+--------------------------------------------------------------------------------
+
+5)Travelling salesman problem:
+
+This is a well known problem in CS, given N number of cities, which
+are linked to each other with 1 or more road. The problem is to find the
+shortest tour that visits each city.
+
+if We got 3 cities A, B, and C with roads between all of them, so possible
+routes can be:
+
+A to B to C
+A to C to B
+B to C to A
+B to A to C
+C to A to B
+C to B to A
+
+Some of these routes are the same but in the reverse, so in reality there are
+only 3 possibilities.
+
+so if we got 4 cities that means we have 12 possibilities, and 5 cities that
+means we have 60 possibilities.
+
+There is pattern if we got k cities that means we have (k!)/2 possibilities,
+and we have n cities that means we have (n!)/2 possibilities.
+
+Thus, this makes this problem factorial complexity, meaning it is O(n!).

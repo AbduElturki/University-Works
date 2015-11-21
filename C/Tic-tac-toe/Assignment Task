@@ -1,0 +1,18 @@
+Write a program to play Noughts and Crosses (also known as Tic-Tac-Toe). You are
+given a skeleton code as a starting point.
+
+Two human players take turns to type in a move such as b3 to say which cell they
+want. Player X always starts.
+
+The skeleton program has been written avoiding pointers as much as possible.
+That means that a function which changes a structure must return the new version
+of the structure as a result, and the caller must put that result back into the
+original structure variable.
+
+You will notice that the testing framework has been improved since the first C
+assignment. You no longer have to comment-in and comment-out tests. You can
+safely leave them alone. All the functions have been provided for you, in a
+minimal form which compiles and runs, but doesn't do the right thing. Your task
+is to develop the functions one by one. The exact details of what each function
+should do are illustrated by the tests. Type ./oxo -t after each change you make
+to see how well you are doing. When all the tests pass, you have finished.

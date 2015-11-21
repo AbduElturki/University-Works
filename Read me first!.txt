@@ -1,0 +1,11 @@
+This where I upload my finished assignments for my University.
+
+There are 3 folders, C, Haskell, and Algorithm.
+
+C folder includes assignments for C language, it also includes file named "Task Assignment", where it explains the aim of the task, the readme.txt in each assignment folder explains
+how extension.c code works.
+
+Haskell folder is for Haskell language, it includes "Task Assignment" files as well, readme.lhs and readme.pdf. both readme files are the same, the pdf was created by using pandoc.
+
+Algorithm folder include .txt files which are answers for the assignment questions. The questions are available here https://github.com/conorhoughton/COMS10002/tree/master/2015_16/worksheets 
+If I have obatained any feedbacks from the lecturer, I will include it in this folder.

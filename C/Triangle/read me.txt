@@ -1,0 +1,11 @@
+This extension also can do calculation such as calculating the area, perimeter, and the height of a triangle. Below will explain each command that the program supports.
+
+1. “./extension x y z” The values of x, y, and z has to be a valid integer. This command will tell you the type/class of the triangle.
+
+2. “./extension x y z area” The values of x, y, and z has to be a valid integer. This command will calculate the area of triangle. Note: the area given here is only approximation.
+
+3. “./extension h b area” The values of h and b has to be a valid integer. this command is much more accurate than the previous command.
+
+4. “./extension x y z perimeter” The values of x, y, and z has to be a valid integer. this command will calculate the perimeter of a triangle.
+
+5. “./extension ” This command will list all the previous within the terminal.

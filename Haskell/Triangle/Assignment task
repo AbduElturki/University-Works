@@ -1,0 +1,8 @@
+In this assignment your task is to understand basic types and functions in
+Haskell, as well as to gain an understanding of how to use the ghc compiler
+and ghci interpreter.
+
+The assignment consists of the following files, please finish reading the whole
+of this document before looking at the others! NOTE: This assignment is designed
+to teach you as you go through the files in order: make sure you've read
+everything that precedes a task before attempting it!
