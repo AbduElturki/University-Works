@@ -1,5 +1,0 @@
-Q1 18/20 - part b, you don't explain how you get O(n) for the adding step and in any case that's wrong, there are more than two numbers added
-Q2 20/20 - good!
-Q3 20/20 - very nicely done.
-Q4 12/20 - good and accurate treatment of a reasonably straightforward example
-Q5 14/20 - nice discussion of classic example, but not really described as an algorithm as such
