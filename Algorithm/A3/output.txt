@@ -1,0 +1,77 @@
+$ ./A3 a_portrait.txt
+
+
+Creating a hash table...
+Number of words read/registered: 100997
+The hash table has been created.
+Reading into table took:  0.040674 seconds.
+Number of empty indexes: 2619
+Hash table size: 8000
+Percentage used 67.262500%
+
+
+Creating a linked list...
+Number of words read/registered: 100997
+The linked list has been created.
+Reading into list took:   3.995905 seconds.
+The lenght of the list is: 9065
+
+
+Enter word for retrieval: looking
+the word 'looking' occurs 24 times. (using list)
+Number of comparisons 8590
+the word 'looking' occurs 24 times. (using table)
+Number of comparisons 3
+
+
+Another query? [y] to continue, else to quit: y
+Enter word for retrieval: me
+the word 'me' occurs 142 times. (using list)
+Number of comparisons 8136
+the word 'me' occurs 142 times. (using table)
+Number of comparisons 3
+
+
+Another query? [y] to continue, else to quit: y
+Enter word for retrieval: epiphany
+The word 'epiphany' was not found
+
+
+Another query? [y] to continue, else to quit: y
+Enter word for retrieval: seraphim
+the word 'seraphim' occurs 5 times. (using list)
+Number of comparisons 4064
+the word 'seraphim' occurs 5 times. (using table)
+Number of comparisons 0
+
+
+Another query? [y] to continue, else to quit: y
+Enter word for retrieval: ardent
+the word 'ardent' occurs 12 times. (using list)
+Number of comparisons 760
+the word 'ardent' occurs 12 times. (using table)
+Number of comparisons 0
+
+
+Another query? [y] to continue, else to quit: y
+Enter word for retrieval: windless
+the word 'windless' occurs 2 times. (using list)
+Number of comparisons 772
+the word 'windless' occurs 2 times. (using table)
+Number of comparisons 0
+
+
+Another query? [y] to continue, else to quit: y
+Enter word for retrieval: esthetic
+the word 'esthetic' occurs 30 times. (using list)
+Number of comparisons 1833
+the word 'esthetic' occurs 30 times. (using table)
+Number of comparisons 0
+
+
+Another query? [y] to continue, else to quit: y
+Enter word for retrieval: computer
+The word 'computer' was not found
+
+
+Another query? [y] to continue, else to quit: :)

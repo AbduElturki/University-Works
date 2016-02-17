@@ -1,0 +1,11 @@
+-- TODO #1.4
+repscale :: Int -> Double -> Command -> Command
+repscale 2 f s = s :> scale 2 f s
+repscale 3 f s = s :> scale 3 f (s :> scale f s)
+repscale n f s = s :> scale f (repscale (n-1))
+--repscale n f s command = command
+
+
+tip :> Fd x :> Lt d :> tip :> (drawTree l) :> Go (Fd x) :> Rt d :> tip :> (drawTree r)
+
+koch n :> rep (n - 1) (Rt 60 :> koch n)

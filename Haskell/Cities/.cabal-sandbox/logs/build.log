@@ -1,0 +1,11 @@
+
+package: MonadRandom-0.4.1
+os: windows
+arch: x86_64
+compiler: ghc-7.10.2
+client: cabal-install-1.22.6.0
+dependencies: transformers-compat-0.4.0.4 transformers-0.4.2.0
+              random-1.1 mtl-2.2.1 base-4.8.1.0
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
